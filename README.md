@@ -58,4 +58,14 @@ Options:
 
 Example run:
 
-
+```
+python3 scripts/generate_plot.py --title "Training using 8 GPUs" \
+                                 --num-gpu 8 \
+				 --architectures "NVIDIA H100-SXM5-80GB,NVIDIA H100-PCIe-80GB" \
+				 --tasks "bert,resnet" \
+				 --table-filename assets/mlperf_json/mlperf_inference_40.json \
+				 --ylabel "Relative performance" \
+				 --xlabel "Model" --normalize_min True \
+				 --invert True \
+				 --output-file assets/plots/H100-SXM-PCIe-comparison.png
+```
